@@ -4,16 +4,16 @@
  *
  * uses potentiometer input to change angle of servo connected to digital  
  * pin 13. Potentiometer is connected to analog pin 2.
- *
- * @version 12 July 1017
- * copyleft 2005 DojoDave <http://www.0j0.org>
+ * @author Morgan Douglas
+ * @version 12 July 2017
+ * @assistance 2005 DojoDave <http://www.0j0.org>
  * http://arduino.berlios.de
  *
  */
  
-SoftwareServo myservo;
+SoftwareServo myservo;  // creates servo object to control servo
 int potPin = 2;    // select the input pin for the potentiometer
-int servoPin = 13;   // select the pin for the LED
+int servoPin = 13;   // select the pin for the servo
 int val = 0;       // variable to store the value coming from the sensor
 
 void setup() {
