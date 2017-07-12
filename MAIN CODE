@@ -1,13 +1,11 @@
 #include <SoftwareServo.h>
-/* Analog Read to LED
+/* Analog Read to Servo
  * ------------------ 
  *
- * turns on and off a light emitting diode(LED) connected to digital  
- * pin 13. The amount of time the LED will be on and off depends on
- * the value obtained by analogRead(). In the easiest case we connect
- * a potentiometer to analog pin 2.
+ * uses potentiometer input to change angle of servo connected to digital  
+ * pin 13. Potentiometer is connected to analog pin 2.
  *
- * Created 1 December 2005
+ * @version 12 July 1017
  * copyleft 2005 DojoDave <http://www.0j0.org>
  * http://arduino.berlios.de
  *
@@ -19,8 +17,7 @@ int servoPin = 13;   // select the pin for the LED
 int val = 0;       // variable to store the value coming from the sensor
 
 void setup() {
-  myservo.attach(servoPin);
-  pinMode(servoPin, OUTPUT);  // declare the ledPin as an OUTPUT
+  myservo.attach(servoPin); // declare the ledPin as an OUTPUT
 }
 
 void loop() {
