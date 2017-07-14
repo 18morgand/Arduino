@@ -1,0 +1,48 @@
+int pos0 = 0;
+int rotationAngle = 10;
+int delayTime = 15
+#include <Servo.h>
+Servo servo1;
+Servo servo2;
+
+void setup() {
+  servo1.attach(5);
+  servo2.attach(6);
+  servo1.write(pos0);
+  servo2.write(pos0);
+}
+
+void loop() { 
+  for (int pos = 0; pos <= rotationAngle; pos++) { // goes from 0 degrees to 180 degrees
+    // in steps of 1 degree
+    servo1.write(pos);              // tell servo to go to position in variable 'pos'
+    servo2.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(delayTime); // waits 15ms for the servo to reach the position
+  }
+  for (int pos = rotationAngle; pos >= 0; pos--) { // goes from 180 degrees to 0 degrees
+    servo1.write(pos);              // tell servo to go to position in variable 'pos'
+    servo2.write(pos);              // tell servo to go to position in variable 'pos'
+    delay(delayTime); // waits 15ms for the servo to reach the position
+  }
+
+
+  
+}
+
+
+//    servo1.write(0);
+//    delay(15);
+//    servo2.write(0);
+//    delay(15);
+//    servo1.write(pos1);
+//    delay(15);
+//  
+//  else {
+//    servo1.write(pos1);
+//    delay(15);
+//  }
+
+//  //if(button.isclicked)
+//  {
+//treturn;
+//  }
