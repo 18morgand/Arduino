@@ -1,7 +1,9 @@
+#include <Servo.h>
+
 int pos0 = 0;
 int rotationAngle = 10;
-int delayTime = 15
-#include <Servo.h>
+int delayTime = 15;
+
 Servo servo1;
 Servo servo2;
 
@@ -44,5 +46,5 @@ void loop() {
 
 //  //if(button.isclicked)
 //  {
-//treturn;
+//return;
 //  }
